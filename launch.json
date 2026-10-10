@@ -1,0 +1,22 @@
+{
+  "kind": "evm_contracts",
+  "contracts": [
+    {
+      "contract": "PanelDesigns",
+      "constructorArgs": []
+    },
+    {
+      "contract": "PanelRenderer",
+      "constructorArgs": [
+        "0x0000eC93127BAA929E58E97dd0095A2BFb38ec1D",
+        "$contract:PanelDesigns",
+        "0xFc016403Ea7DAEA4582936E1c8D8D709E17593ab",
+        "0x0CE16147f1e69D151252f000e8Be3647a120c897",
+        "0x8E604EeBBC9D49e919b7D3de8534018a87292bE0",
+        "0xCB8Ecec7902E55A62C34de38c950a907851ae298",
+        "0xd2c66890e2d2dc456f117c14ff12435ffc6fa56b73ab7955f0d838d8ae76cb76"
+      ]
+    }
+  ],
+  "notes": "Deploy PanelDesigns first with no constructor arguments, then PanelRenderer on Ethereum mainnet using the deployed PanelDesigns address, the specified seats contract, existing PanelCode0 through PanelCode3 addresses, and the expected script hash. The PanelCode contracts are already deployed and are not part of this launch. Neither application has an owner, admin, fee, pause, or upgrade path; deployment requires no ETH funding or initialization calls. PanelRenderer stores its dependencies at construction and validates the script chunks and hash when rendering or reading the script."
+}
